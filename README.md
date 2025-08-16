@@ -1,5 +1,23 @@
 # React Helmet
 
+## How to use this fork
+1. Sync this fork with upstream repo https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork
+2. Create a release branch
+  `git checkout -b release/<date>`
+3. Build the package
+  ```
+  npm i
+  npm run build
+  ```
+4. Push the release branch with `dist` directory
+  ```
+  git add -f build/
+  git commit -m 'release: <date>'
+  git push origin release/<date>
+  git tag -f latest
+  git push -f origin latest
+  ```
+
 [![Latest NPM Release](https://img.shields.io/npm/v/@dr.pogodin/react-helmet.svg)](https://www.npmjs.com/package/@dr.pogodin/react-helmet)
 [![NPM Downloads](https://img.shields.io/npm/dm/@dr.pogodin/react-helmet.svg)](https://www.npmjs.com/package/@dr.pogodin/react-helmet)
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/birdofpreyru/react-helmet/tree/master.svg?style=shield)](https://app.circleci.com/pipelines/github/birdofpreyru/react-helmet)
